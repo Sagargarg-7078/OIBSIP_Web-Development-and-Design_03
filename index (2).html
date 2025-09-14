@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="converter-card">
+            <div class="header">
+                <h1>🌡️ Temperature Converter</h1>
+                <p>Convert between Celsius, Fahrenheit, and Kelvin</p>
+            </div>
+            
+            <div class="converter-form">
+                <div class="input-group">
+                    <label for="temperature">Temperature Value:</label>
+                    <input 
+                        type="number" 
+                        id="temperature" 
+                        placeholder="Enter temperature..."
+                        step="any"
+                        required
+                    >
+                    <span class="error-message" id="error-message"></span>
+                </div>
+                
+                <div class="conversion-options">
+                    <div class="from-option">
+                        <label>From:</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="fromUnit" value="celsius" checked>
+                                <span class="radio-custom"></span>
+                                Celsius (°C)
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="fromUnit" value="fahrenheit">
+                                <span class="radio-custom"></span>
+                                Fahrenheit (°F)
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="fromUnit" value="kelvin">
+                                <span class="radio-custom"></span>
+                                Kelvin (K)
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="to-option">
+                        <label>To:</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="toUnit" value="fahrenheit" checked>
+                                <span class="radio-custom"></span>
+                                Fahrenheit (°F)
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="toUnit" value="celsius">
+                                <span class="radio-custom"></span>
+                                Celsius (°C)
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="toUnit" value="kelvin">
+                                <span class="radio-custom"></span>
+                                Kelvin (K)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="button" id="convertBtn" class="convert-btn">
+                    <span class="btn-text">Convert</span>
+                    <span class="btn-icon">→</span>
+                </button>
+            </div>
+            
+            <div class="result-section" id="resultSection" style="display: none;">
+                <div class="result-card">
+                    <h3>Converted Temperature</h3>
+                    <div class="result-value" id="resultValue">0</div>
+                    <div class="result-unit" id="resultUnit">°F</div>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <h4>Temperature Reference</h4>
+                <div class="reference-grid">
+                    <div class="reference-item">
+                        <span class="temp">0°C</span>
+                        <span class="desc">Freezing point of water</span>
+                    </div>
+                    <div class="reference-item">
+                        <span class="temp">100°C</span>
+                        <span class="desc">Boiling point of water</span>
+                    </div>
+                    <div class="reference-item">
+                        <span class="temp">37°C</span>
+                        <span class="desc">Human body temperature</span>
+                    </div>
+                    <div class="reference-item">
+                        <span class="temp">0K</span>
+                        <span class="desc">Absolute zero</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
